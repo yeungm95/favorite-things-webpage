@@ -14,13 +14,20 @@ $(document).ready(function() {
 
     // $("#output").text("My favorite sport is " + favoriteThingsArray[4])
 
-    newArray = []
-    newArray.push(favoriteThingsArray[1])
-    newArray.push(favoriteThingsArray[0])
-    newArray.push(favoriteThingsArray[2])
+    newArrays = []
+    newArrays.push(favoriteThingsArray[1])
+    newArrays.push(favoriteThingsArray[0])
+    newArrays.push(favoriteThingsArray[2])
 
-    $("ul#outputList").text("<li>" + newArray + "<li>")
-  
+
+    newArrays.forEach(function(newArray) {
+      var li = "<li>"
+      var li2= "</li>"
+
+      console.log(li+newArray)
+      $("#outputList").append(li+newArray+li2)
+    })
+
 
     // Testing
     // var favoriteThingsArray = []
